@@ -257,7 +257,7 @@ function walkDirectory( directory, fileList ) {
 		dirList.forEach(function(item){
 			var filePath = utility.directoryFilter(directory) + Path.sep + item;
 
-			if( item !== '.' && item !== '..' && item !== '.svn' && item !=='.DS_Store' && item !=='.idea' ) {
+			if( item !== '.' && item !== '..' && item !== '.svn' && item !=='.DS_Store' && item !=='.idea' && item !=='.git' ) {
 				if(fs.statSync(filePath).isDirectory()){
 					walkDirectory(filePath, fileList);
 				}else{
